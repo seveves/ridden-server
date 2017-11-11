@@ -1,0 +1,94 @@
+{
+  "rides": [
+    {
+      "description": "Shuttling around the wonderful mountains in Morzine, France.",
+      "title": "Ride to Morzine",
+      "duration": 5,
+      "location": {
+        "lat": 46.179192,
+        "long": 6.708877
+      },
+      "seats": {
+        "available": 8,
+        "left": 8
+      },
+      "starting_at": "Fri, 08 Dec 2017 07:10:00 GMT",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "Schauders at Nauders",
+      "languages": [
+        "en",
+        "de",
+        "it"
+      ],
+      "description": "Going full enduro style on the rooty trails of Nauders.",
+      "location": {
+        "lat": 46.888823,
+        "long": 10.500202
+      },
+      "created_at": "2017-11-08T07:17:25.061Z",
+      "starting_at": "2017-12-08T07:10:00.000Z",
+      "duration": 4,
+      "driverId": 2,
+      "seats": {
+        "available": 12,
+        "left": 9
+      }
+    },
+    {
+      "id": 3,
+      "title": "Bike the Rock",
+      "languages": [
+        "en",
+        "de"
+      ],
+      "description": "Riding one of the gnarliest tracks on the swabian alb.",
+      "location": {
+        "lat": 48.793227,
+        "long": 9.931607
+      },
+      "created_at": "2017-11-08T07:17:25.061Z",
+      "starting_at": "2017-12-08T07:10:00.000Z",
+      "duration": 5,
+      "driverId": 3,
+      "seats": {
+        "available": 6,
+        "left": 6
+      }
+    },
+    {
+      "description": "Wir geben uns mal richtig nen Korb in Korb bei Waiblingen.",
+      "title": "Korb bekommen",
+      "duration": 3,
+      "location": {
+        "lat": 48.841411,
+        "long": 9.360891
+      },
+      "seats": {
+        "available": "12"
+      },
+      "starting_at": "Fri, 08 Dec 2017 07:10:00 GMT",
+      "id": 4
+    }
+  ],
+  "drivers": [
+    {
+      "id": 1,
+      "name": "Mr. Niceguy"
+    },
+    {
+      "id": 2,
+      "name": "Carbon Condition"
+    },
+    {
+      "id": 3,
+      "name": "Braaap Stevens"
+    },
+    {
+      "id": 4,
+      "name": "The Big Benz"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "rides": [
+    {
+      "id": 1,
+      "title": "Ride to Morzine",
+      "languages": [ "en" ],
+      "description": "Shuttling around the wonderful mountains in Morzine, France.",
+      "location": {
+        "lat": 46.179192,
+        "long": 6.708877
+      },
+      "created_at": "2017-11-08T07:17:25.061Z",
+      "starting_at": "2017-12-08T07:10:00.000Z",
+      "duration": 5,
+      "driverId": 1,
+      "seats": {
+        "available": 10,
+        "left": 10
+      }
+    },
+    {
+      "id": 2,
+      "title": "Schauders at Nauders",
+      "languages": [ "en", "de", "it" ],
+      "description": "Going full enduro style on the rooty trails of Nauders.",
+      "location": {
+        "lat": 46.888823,
+        "long": 10.500202
+      },
+      "created_at": "2017-11-08T07:17:25.061Z",
+      "starting_at": "2017-12-08T07:10:00.000Z",
+      "duration": 4,
+      "driverId": 2,
+      "seats": {
+        "available": 12,
+        "left": 8
+      }
+    },
+    {
+      "id": 3,
+      "title": "Bike the Rock",
+      "languages": [ "en", "de" ],
+      "description": "Riding one of the gnarliest tracks on the swabian alb.",
+      "location": {
+        "lat": 48.793227,
+        "long": 9.931607
+      },
+      "created_at": "2017-11-08T07:17:25.061Z",
+      "starting_at": "2017-12-08T07:10:00.000Z",
+      "duration": 5,
+      "driverId": 3,
+      "seats": {
+        "available": 6,
+        "left": 6
+      }
+    },
+    {
+      "id": 4,
+      "title": "Korb bekommen",
+      "languages": [ "de" ],
+      "description": "Wir geben uns mal richtig nen Korb in Korb.",
+      "location": {
+        "lat": 48.841411,
+        "long": 9.360891
+      },
+      "created_at": "2017-11-08T07:17:25.061Z",
+      "starting_at": "2017-12-08T07:10:00.000Z",
+      "duration": 3,
+      "driverId": 4,
+      "seats": {
+        "available": 10,
+        "left": 10
+      }
+    }
+  ],
+  "drivers": [
+    { "id": 1, "name": "Mr. Niceguy" },
+    { "id": 2, "name": "Carbon Condition" },
+    { "id": 3, "name": "Braaap Stevens" },
+    { "id": 4, "name": "The Big Benz" }
+  ]
+}
