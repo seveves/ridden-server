@@ -8,20 +8,34 @@ class Service {
   }
 
   find (params) {
-    if (params.query.near) {
-      const nearParams = params.query.near.split(':');
-      const distance = +nearParams[0];
-      const lat = +nearParams[1];
-      const lon = +nearParams[2];
-      return this.options.ShuttleService.find().then(doc => ({
-        data: doc.data.filter(shuttle => distance >= geo.getDistanceBetweenInKm(shuttle.location,{ lat, lon }))
-      }));
-    }
-    return this.options.ShuttleService.find(params);
+    return new Promise((resolve, reject) => {
+      if (params.query.near) {
+        const nearParams = params.query.near.split(':');
+        const distance = +nearParams[0];
+        const lat = +nearParams[1];
+        const lon = +nearParams[2];
+        delete params.query['near'];
+        this.options.Model.find(params.query, (err, docs) => {
+          if (err) {
+            return reject(err);
+          }
+          resolve({
+            data: docs.filter(shuttle => distance >= geo.getDistanceBetweenInKm(shuttle.location, { lat, lon }))
+          });
+        })
+      } else {
+        this.options.Model.find(params.query, (err, docs) => {
+          if (err) {
+            return reject(err);
+          }
+          resolve({ data: docs });
+        });
+      }
+    });
   }
 
   get (id, params) {
-    return this.options.ShuttleService.get(id, params);
+    return Promise.reject(new errors.MethodNotAllowed());
   }
 
   create (data, params) {

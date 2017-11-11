@@ -1,4 +1,5 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
+const { restrictToRoles } = require('feathers-authentication-hooks');
 
 const {
  hashPassword, protect
@@ -6,8 +7,8 @@ const {
 
 module.exports = {
   before: {
-    all: [],
-    find: [ authenticate('jwt') ],
+    all: [ authenticate('jwt') ],
+    find: [ restrictToRoles({ roles: ['admin'] }) ],
     get: [],
     create: [ hashPassword() ],
     update: [ hashPassword() ],

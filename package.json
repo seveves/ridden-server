@@ -40,6 +40,7 @@
     "compression": "^1.7.1",
     "cors": "^2.8.4",
     "feathers-authentication-hooks": "^0.1.5",
+    "feathers-hooks-common": "^3.10.0",
     "feathers-mongoose": "^5.1.2",
     "feathers-seeder": "^1.0.10",
     "helmet": "^3.9.0",

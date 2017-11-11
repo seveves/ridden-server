@@ -1,15 +1,15 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
-const { associateCurrentUser, queryWithCurrentUser, restrictToOwner } = require('feathers-authentication-hooks');
+const { associateCurrentUser, queryWithCurrentUser, restrictToRoles } = require('feathers-authentication-hooks');
 
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
-    find: [ restrictToOwner(), queryWithCurrentUser() ],
-    get: [ restrictToOwner(), queryWithCurrentUser() ],
-    create: [ associateCurrentUser() ],
-    update: [ restrictToOwner(), associateCurrentUser() ],
-    patch: [ restrictToOwner(), associateCurrentUser() ],
-    remove: [ restrictToOwner() ]
+    find: [],
+    get: [],
+    create: [ restrictToRoles({ roles: ['admin', 'company'] }), associateCurrentUser() ],
+    update: [ restrictToRoles({ roles: ['admin', 'company'] }), associateCurrentUser() ],
+    patch: [ restrictToRoles({ roles: ['admin', 'company'] }), associateCurrentUser() ],
+    remove: [ restrictToRoles({ roles: ['admin', 'company'] }) ]
   },
 
   after: {

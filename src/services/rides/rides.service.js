@@ -5,11 +5,12 @@ const hooks = require('./rides.hooks');
 module.exports = function (app) {
   
   const paginate = app.get('paginate');
-  const ShuttleService = app.service('shuttles');
+  const mongooseClient = app.get('mongooseClient');
+  const Model = mongooseClient.model('shuttles');
 
   const options = {
     name: 'rides',
-    ShuttleService,
+    Model,
     paginate
   };
 
