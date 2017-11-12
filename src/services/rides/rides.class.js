@@ -20,7 +20,10 @@ class Service {
             return reject(err);
           }
           resolve({
-            data: docs.filter(shuttle => distance >= geo.getDistanceBetweenInKm(shuttle.location, { lat, lon }))
+            data: docs.filter(shuttle => distance >= geo.getDistanceBetweenInKm(
+              { lat: shuttle.lat, lon: shuttle.lon },
+              { lat, lon }
+            ))
           });
         })
       } else {

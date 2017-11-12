@@ -9,10 +9,8 @@ module.exports = function (app) {
     title: { type: String, required: true },
     languages: [String],
     description: { type: String, required: true },
-    location: {
-      lat: { type: Number, required: true },
-      lon: { type: Number, required: true },
-    },
+    lat: { type: Number, required: true },
+    lon: { type: Number, required: true },
     takingOff: { type: Date, required: true },
     duration: { type: Number, required: true },
     availableSeats: { type: Number, required: true },
