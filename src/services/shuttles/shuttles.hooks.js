@@ -1,5 +1,5 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
-const { associateCurrentUser, queryWithCurrentUser, restrictToRoles } = require('feathers-authentication-hooks');
+const { associateCurrentUser, restrictToRoles } = require('feathers-authentication-hooks');
 
 module.exports = {
   before: {
