@@ -14,7 +14,7 @@ const shuttleSchema = {
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
-    find: [ restrictToOwner(), queryWithCurrentUser() ],
+    find: [ ],
     get: [ restrictToOwner(), queryWithCurrentUser() ],
     create: [ associateCurrentUser() ],
     update: [ restrictToOwner(), associateCurrentUser() ],

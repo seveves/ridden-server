@@ -25,7 +25,9 @@
     "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "node src/",
-    "mocha": "mocha test/ --recursive --exit"
+    "mocha": "mocha test/ --recursive --exit",
+    "deploy": "now -e MONGO_USER=@mongouser -e MONGO_PW=@mongopw",
+    "now-start": "NODE_ENV=production node src/"
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.0.0",

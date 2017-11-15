@@ -34,7 +34,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 // Host the public folder
-app.use('/', express.static(app.get('public')));
+let staticServe = express.static(app.get('public'));
+app.use('/', staticServe);
+app.use('/app*', staticServe);
 
 // Set up Plugins and providers
 app.configure(rest());

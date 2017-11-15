@@ -14,7 +14,6 @@ module.exports = function (app) {
     takingOff: { type: Date, required: true },
     duration: { type: Number, required: true },
     availableSeats: { type: Number, required: true },
-    leftSeats: { type: Number, required: true },
     userId: String,
   }, {
     timestamps: true
