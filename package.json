@@ -26,8 +26,14 @@
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "node src/",
     "mocha": "mocha test/ --recursive --exit",
-    "deploy": "now -e MONGO_USER=@mongouser -e MONGO_PW=@mongopw",
-    "now-start": "NODE_ENV=production node src/"
+    "now-start": "node src/"
+  },
+  "now": {
+    "env": {
+      "MONGO_USER": "@mongouser",
+      "MONGO_PW": "@mongopw",
+      "NODE_ENV": "production"
+    }
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.0.0",
